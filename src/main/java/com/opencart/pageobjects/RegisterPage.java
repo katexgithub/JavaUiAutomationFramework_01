@@ -1,5 +1,6 @@
 package com.opencart.pageobjects;
 
+import com.opencart.managers.DriverManager;
 import com.opencart.managers.ScrollManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,7 +49,8 @@ public class RegisterPage extends Page {
         System.out.println("The Privacy Toggle is clicked");
     }
 
-    public void clickOnTheContinueButton() {
+    public void clickOnTheContinueButton() throws InterruptedException {
+        ScrollManager.scrollToElement(DriverManager.getInstance().getDriver(), continueButton);
         continueButton.click();
         System.out.println("The Continue Button is clicked");
     }
