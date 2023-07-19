@@ -10,9 +10,9 @@ public class HomePageSteps {
     WebDriver driver = DriverManager.getInstance().getDriver();
     HomePage homePage = new HomePage(driver);
 
-    @Given("Home Page is accessed")
+    @Given("home page is accessed")
     public void homePageIsAccessed() {
-        driver.get("https://andreisecuqa.host/");
+//        driver.get("https://andreisecuqa.host/");
     }
 
     @And("RegisterPage is accessed from HomePage menu")

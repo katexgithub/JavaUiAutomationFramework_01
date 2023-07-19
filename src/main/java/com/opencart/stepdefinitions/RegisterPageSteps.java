@@ -23,21 +23,6 @@ public class RegisterPageSteps {
         registerPage.fillInTheRegisterForm(firstName, lastName, randomEmail, password);
     }
 
-    @And("the privacyToggle is enabled")
-    public void thePrivacyToggleIsEnabled() {
-        try {
-            registerPage.switchOnThePrivacyToggle(driver);
-        } catch (InterruptedException e) {
-            System.out.println("Error!");
-        }
-    }
-
-
-    @And("continueButton is clicked")
-    public void continuebuttonIsClicked() throws InterruptedException {
-        registerPage.clickOnTheContinueButton();
-    }
-
     @And("the registration form is completed with the following data:")
     public void theRegistrationFormIsCompletedWithTheFollowingData(Map<String, String> userDetailsMap) {
 
@@ -62,9 +47,5 @@ public class RegisterPageSteps {
         }
 
         registerPage.fillInTheRegisterForm(firstNameValue, lastNameValue, emailValue, passwordValue);
-
-
-
-
     }
 }

@@ -19,9 +19,4 @@ public class LoginPageSteps {
         String passwordValue = userDetailsList.get(1);
         loginPage.fillInTheLoginForm(emailValue, passwordValue);
     }
-
-    @When("loginButton is clicked")
-    public void loginbuttonIsClicked() {
-        loginPage.clickOnLoginBtn();
-    }
 }
